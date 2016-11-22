@@ -6,14 +6,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Hi...">
-    <title>Tag: hello - Hi...</title>
+    <title>Category: 帮助文档 - Hi...</title>
     <meta name="author" content="huangpeixin">
     
     
     
     <meta property="og:type" content="blog">
 <meta property="og:title" content="Hi...">
-<meta property="og:url" content="http://localhost:4000/tags/hello/index.html">
+<meta property="og:url" content="http://localhost:4000/categories/帮助文档/index.html">
 <meta property="og:site_name" content="Hi...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hi...">
@@ -175,8 +175,8 @@
             <div class="postShorten-header">
                 <h1 class="postShorten-title" itemprop="headline">
                     
-                        <a class="link-unstyled" href="/2016/11/23/hello-world/">
-                            Hello World
+                        <a class="link-unstyled" href="/2016/11/23/build-blog-by-githubpage-and-hexo - 副本/">
+                            利用GitHub Pages和Hexo搭建个人博客
                         </a>
                     
                 </h1>
@@ -187,27 +187,53 @@
     	
     </time>
     
+        <span>dans </span>
+        
+    <a class="category-link" href="/categories/帮助文档/">帮助文档</a>
+
+
+    
 </div>
 
             </div>
             
                 <div class="postShorten-content" itemprop="articleBody">
-                    <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+                    <p>本文首发地址： <a href="https://daolee.xyz/" target="_blank" rel="external">非生异也</a></p>
+<p>本项目源码托管在<a href="https://github.com/daolee/daolee.github.io" target="_blank" rel="external">GitHub</a>上</p>
+<p>##Why<br>阮一峰曾经说过:喜欢写Blog的人,会经历3个阶段。</p>
+<p>第一阶段，刚接触Blog，觉得很新鲜，试着选择一个免费空间来写。<br>第二阶段，发现免费空间限制太多，就自己购买域名和空间，搭建独立博客。<br>第三阶段，觉得独立博客的管理太麻烦，最好在保留控制权的前提下，让别人来管，自己只负责写文章。<br>在这之前，我在博客园里写了两年的博客，数量虽然不多，但都是自己学习过程的真实记录，这属于第一阶段。随着学习的东西越来越多，总想着要有个独立的个人主页，于是就开始不停地Google。最终在SAE + WordPress 和 GitHub Pages + Hexo 之间选择了后者，一是因为Git的存在，二是因为喜欢这种轻量级框架的简单而强大。</p>
+<p>##Start</p>
+<p>##GitHub Pages</p>
+<p>GitHub Pages的官方介绍是 Websites for you and your projects. 利用它只需要简单的几步，就可以建立一个自己的站点，前提是已经有了一个GitHub帐号。</p>
+<p>1、Create a repository：<br>repository名称的格式必须为 username.github.io （username为自己的GitHub帐号。）</p>
+<p>2、Clone the repository：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">clone</span> https://github.com/username/username.github.io</div></pre></td></tr></table></figure></p>
+<p>3、Hello World：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> user.github.io</div><div class="line">$ exho <span class="string">"Hello World"</span> &gt; index.html</div></pre></td></tr></table></figure></p>
+<p>4、 Push it：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ git add --all</div><div class="line">$ git commit -m <span class="string">"Initial commit"</span></div><div class="line">$ git push -u origin master</div></pre></td></tr></table></figure></p>
+<p>5、已经生成了你的主页 <a href="http://username.github.io" target="_blank" rel="external">http://username.github.io</a> </p>
+<p>Hexo</p>
+<p>Hexo是一个快速、简洁且高效的博客框架，具有如下特点：<br>急速生成静态网页<br>支持Markdown<br>一键部署博客到GitHub Pages等平台<br>丰富的插件支持</p>
+<p>1、 先在本地环境配置好Hexo<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-cli -g</div><div class="line">$ hexo init username.github.io</div><div class="line">$ <span class="built_in">cd</span> username.github.io</div><div class="line">$ npm install</div><div class="line">$ hexo server</div></pre></td></tr></table></figure></p>
+<p>2、将博客部署到GitHub上：这时在浏览器输入<a href="http://localhost:4000">http://localhost:4000</a> 就可以在本地预览博客了</p>
+<p>安装 hexo-deployer-git<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-git --save</div></pre></td></tr></table></figure></p>
+<p>修改配置文件_config.yml<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  <span class="built_in">type</span>: git</div><div class="line">  repo: &lt;repository url&gt;</div></pre></td></tr></table></figure></p>
+<p>提交到GitHub上<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ hexo clean</div><div class="line">$ hexo g</div><div class="line">$ hexo d</div></pre></td></tr></table></figure></p>
+<p>此时访问 <a href="http://username.github.io" target="_blank" rel="external">http://username.github.io</a> 就和本地一样的效果了。更多Hexo的使用访问Hexo官方文档 </p>
+<p>Append<br>现在已经可以通过访问你的GitHub Pages二级域名来访问你的博客了，不过既然是独立博客，当然是应该通过独立域名来访问。</p>
+<p>购买域名</p>
+<p>由于在国内购买域名需要备案（虽然我已经备案过了），费时比较长，所以我又在国外购买了一个域名。而且正好赶上namecheap疯狂促销，就以很满意的价格买了一年的。</p>
+<p>域名解析</p>
+<p>添加CNAME<br>在usname.github.io/source/下新建CNAME文件，写入购买的域名，保存并部署。</p>
+<p>DNS设置<br>建议使用DNSpod,添加两条A记录分别为<br>192.30.252.153<br>192.30.252.154<br>这两个IP即GitHub Pages的IP。</p>
+<p>去namecheap修改DNS地址<br>在域名设置里面将DNS改为DNSpod提供的DNS<br>f1g1ns1.dnspod.net<br>f1g1ns2.dnspod.net<br>可能需要等段时间才能生效。</p>
+<p>后记</p>
+<p>本文有些地方可能写得不够清晰，欢迎留言交流。</p>
 
                     
                         
                     
                     
                         <p>
-                            <a href="/2016/11/23/hello-world/#post-footer" class="postShorten-excerpt_link link">
+                            <a href="/2016/11/23/build-blog-by-githubpage-and-hexo - 副本/#post-footer" class="postShorten-excerpt_link link">
                                 Commenter et partager
                             </a>
                         </p>
@@ -227,6 +253,7 @@
 </div>
 
 </section>
+
 
 
                 <footer id="footer" class="main-content-wrap">
