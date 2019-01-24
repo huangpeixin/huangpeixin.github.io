@@ -1,12 +1,13 @@
 <html>
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8">
     <!-- -->
     <meta name="viewport" content="width=device-width, initial-scale=.6, maximum-scale=1, user-scalable=no">
-   
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/locale/zh-cn.js"></script>
     <script src="https://cdn.bootcss.com/vue/2.5.21/vue.js"></script>
+    <script src="F:\huangpeixin\sync\Desktop\lunar.js"></script>
     <style> 
     * {
             box-sizing: border-box;
@@ -37,7 +38,6 @@
     }
     
     .week {
-
     }
     .weekday-name {
         color:#ccc;
@@ -54,9 +54,7 @@
     .day.today{
         background-color: #1e90ff;
     }
-    .day.before {
-        color:#ccc;
-    }
+    
     
     .month {
        /*width:33%;*/
@@ -79,7 +77,7 @@
             </tr>
             <tr v-for="week in month.weeks" class="week">
                 <td v-for="day in week" class="day"  
-                    v-bind:class="[day.month!=month.month ? 'off' : '', isToday(day) ? 'today':'', isBefore(day) ? 'before':'']">
+                    v-bind:class="[day.month!=month.month ? 'off' : '', isToday(day) ? 'today':'']">
                     {{day.date}}
                 </td>
             </tr>
@@ -106,7 +104,6 @@ class Month {
         for(let d=1; d<=daysInMonth; d++) {
             weeks[parseInt((shiftDays+d-1)/7)][(shiftDays+d-1)%7] = this.buildDay(year, month, d)
         }
-
         //下个月
         for(let i=1; i<=6*7-shiftDays-daysInMonth; i++) {
             weeks[parseInt((i+shiftDays+daysInMonth-1)/7)][(i+shiftDays+daysInMonth-1)%7] = this.buildDay(year, month+1, i)
@@ -121,9 +118,6 @@ class Month {
         this.weeks = this.buildWeeks(this.year, this.month)
     }
 }
-
-
-
 function buildMonths(year) {
     let months = []
     for(let m=0; m<12; m++) {
@@ -132,7 +126,6 @@ function buildMonths(year) {
     console.info(months)
     return months
 }
-
 let today = new Date()
 var cal = new Vue({
   el: '#cal',
@@ -140,10 +133,8 @@ var cal = new Vue({
     months: buildMonths(today.getFullYear())
   },
   methods: {
-    isToday:({year,month,date})=>year==today.getFullYear()&&month==today.getMonth()&&date==today.getDate(),
-    isBefore:({year,month,date})=>year<=today.getFullYear()&&month<=today.getMonth()&&date<today.getDate(),
+    isToday:({year,month,date})=>year==today.getFullYear()&&month==today.getMonth()&&date==today.getDate()
   }
 })
-
 </script>
 </html>
