@@ -54,6 +54,9 @@
     .day.today{
         background-color: #1e90ff;
     }
+    .day.before {
+        color:#ccc;
+    }
     
     
     .month {
@@ -77,7 +80,7 @@
             </tr>
             <tr v-for="week in month.weeks" class="week">
                 <td v-for="day in week" class="day"  
-                    v-bind:class="[day.month!=month.month ? 'off' : '', isToday(day) ? 'today':'']">
+                    v-bind:class="[day.month!=month.month ? 'off' : '', isToday(day) ? 'today':'', isBefore(day) ? 'before':'']">
                     {{day.date}}
                 </td>
             </tr>
@@ -133,7 +136,8 @@ var cal = new Vue({
     months: buildMonths(today.getFullYear())
   },
   methods: {
-    isToday:({year,month,date})=>year==today.getFullYear()&&month==today.getMonth()&&date==today.getDate()
+    isToday:({year,month,date})=>year==today.getFullYear()&&month==today.getMonth()&&date==today.getDate(),
+    isBefore:({year,month,date})=>year<=today.getFullYear()&&month<=today.getMonth()&&date<today.getDate(),
   }
 })
 </script>
