@@ -7,26 +7,58 @@
   <body>
     <div id="dateCal">
       <div>
-        <input type="date" pattern="" id="d1">
+        <input type="date" id="d1">
+      </div>
+      <div>      
+      <input type="number" id="diff">
       </div>
       <div>
-      <label>-<input type="radio" name="type" value="sub"></label>
-       <label>+<input type="radio" name="type" value="sub"></label>
-      
-      <input type="number" pattern="[0-9]*" id="diff">
-      </div>
-      <div>
-       <input type="number" pattern="[0-9/]*" id="d2">
+       <input type="date" id="d2">
       </div>
     </div>
     
     <script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
+    <script src="https://cdn.bootcss.com/moment.js/2.24.0/moment.min.js"></script>
     <script type="text/javascript">
-    const NOW = new Date()
+    const _NOW = new Date()
     const $d1 = document.querySelector('#d1')
-    const $ydiff = document.querySelector('#diff')
+    const $diff = document.querySelector('#diff')
     const $d2 = document.querySelector('#d2')
    
+    function cal(e) {
+      if(!e.target.value)
+        return
+      const d1 = $d1.value
+      const d2 = $d2.value
+      const diff = $diff.value
+      const fill = !!d1 + !!d2 + !!diff
+      if(fill==2) {
+        if(!$d1.value) {
+          $d1.value = moment(d2).subtract(diff, 'days').format('YYYY-MM-DD')
+        } else if(!$d2.value) {
+          $d2.value = moment(d1).add(diff, 'days').format('YYYY-MM-DD')
+        } else {
+          $diff.value = moment(d2).diff(d1, 'days')
+        }
+      }  
+      else if(fill==3) {
+        if(e.target.id=='diff') {
+          $d2.value = moment(d1).add(diff, 'days').format('YYYY-MM-DD')
+        } else {
+          $diff.value = moment(d2).diff(d1, 'days')
+        }
+      }
+      console.info(e.target.id)
+    }
+    
+    $d1.value = moment(_NOW).format('YYYY-MM-DD')
+    $d2.value = moment(new Date(_NOW.getFullYear()+1,0,1)).format('YYYY-MM-DD')
+    $diff.value = moment($d2.value).diff($d1.value, 'days')
+    
+    $d1.onchange = cal
+    $d2.onchange = cal
+    $diff.onchange = cal
+    
     
     </script>
   </body>
