@@ -7,27 +7,27 @@
   <body>
     <div id="dateCal">
       <div>
-      <input type="number" pattern="[0-9]*">
-      /
-      <input type="number" pattern="[0-9]*">
-      /
-      <input type="number" pattern="[0-9]*">
+        <input type="date" pattern="" id="d1">
       </div>
       <div>
-      <span>-<input type="number" pattern="[0-9]*"></span>
-      <span>+<input type="number" pattern="[0-9]*"></span>
+      <label>-<input type="radio" name="type" value="sub"></label>
+       <label>+<input type="radio" name="type" value="sub"></label>
+      
+      <input type="number" pattern="[0-9]*" id="diff">
       </div>
       <div>
-      <input type="number" pattern="[0-9]*">
-      /
-      <input type="number" pattern="[0-9]*">
-      /
-      <input type="number" pattern="[0-9]*">
+       <input type="number" pattern="[0-9/]*" id="d2">
       </div>
     </div>
+    
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
     <script type="text/javascript">
     const NOW = new Date()
-
+    const $d1 = document.querySelector('#d1')
+    const $ydiff = document.querySelector('#diff')
+    const $d2 = document.querySelector('#d2')
+   
+    
     </script>
   </body>
 </html>
