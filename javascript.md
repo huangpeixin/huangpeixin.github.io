@@ -1,13 +1,13 @@
-###准备知识
-####Javascript单线程
->单线程负责用户代码执行和网页渲染，缓慢的代码阻塞网页渲染
+### 准备知识
+#### Javascript单线程
+> 单线程负责用户代码执行和网页渲染，缓慢的代码阻塞网页渲染
 
 ```Javascript
 $('body').html('')
 alert()//alert结束后才回渲染
 ```
 
-####同步任务/异步任务
+#### 同步任务/异步任务
 >同步任务：线程上排队执行的任务，只有前一个任务执行完毕，才能执行后一个任务；
 异步任务：不进入主线程、而进入"任务队列"（task queue）的任务，当主线程上任务执行完后才可能执行。
 ![KZEu6J.png](https://s2.ax1x.com/2019/10/18/KZEu6J.png)
@@ -47,7 +47,6 @@ microtasks: Promise   process.nextTick   Object.observe   MutationObserver
 
 
 ------------
-[========]
 
 
 # 异步操作
