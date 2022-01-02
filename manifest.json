@@ -1,0 +1,21 @@
+{
+  "name": "dtpei",
+  "short_name": "dtpei",
+  "description": "一个儿科医生8年写成的「育儿宝典」，值得每位中国父母收藏",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#fff",
+  "theme_color": "#3eaf7c",
+  "icons": [
+    {
+      "src": "/images/icons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/icons/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
